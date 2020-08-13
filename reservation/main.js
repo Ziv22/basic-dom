@@ -1,7 +1,30 @@
 const reservations = {
-    Bob: { claimed: false },
-    Ted: { claimed: true }
+    bob: { claimed: false },
+    ted: { claimed: true }
   }
-  
-  const name = prompt('Please enter the name for your reservation');
-  
+
+const button = document.getElementById("checkReservation");
+
+const checkReservation = function(){
+    let name = document.getElementById("name").value;
+    const message = document.getElementById("message");
+
+    name = name.toLowerCase();
+
+    if(reservations[name] != undefined) {
+        if(reservations[name].claimed){
+            message.innerHTML = "You're reservation has been claimed already";
+        } else {
+            message.innerHTML = `Welcome ${name}! `;
+        }
+    } else {
+        reservations[name] = {cliamed:true}
+        message.innerHTML = "There's no existing resrvation";
+    }
+}
+
+
+
+button.onclick = function(){
+    checkReservation();
+}
