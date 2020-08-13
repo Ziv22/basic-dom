@@ -1,0 +1,15 @@
+#container{
+    display: block;
+    position: absolute;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.square{
+    width: 50px;
+    height: 50px;
+    margin:2px; 
+    /* position: relative; */
+    display: inline-block;
+    border: 1px solid black;
+}
