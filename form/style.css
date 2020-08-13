@@ -1,0 +1,62 @@
+body{
+    background-color: darkslategrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 500px;
+    border: 5px solid rgb(37, 189, 173); 
+    border-radius: 10px;
+    padding:10px;
+    background-color: turquoise;
+}
+#buttonWraper{
+    float: right;
+    margin-top: 10px;
+}
+.error-message{
+    color:crimson;
+    font-weight: bold;
+}
+.wholeLine{
+    width:23em;
+}
+
+#form{
+    width:21em;
+    margin-left: 1em;
+}
+.middleLine{
+    display: inline-block;
+}
+
+input{
+    border: none;
+    height:2em;
+    border-radius: 50px;
+    margin-top: 0.2em;
+    outline: none;
+    padding-left:10px;
+}
+
+label{
+    font-size: 1.4em;
+}
+
+.inputs{
+    margin-top:1em;
+}
+#button{
+    margin-right:1.1em;
+    height:2em;
+    width: 10em;
+    font-size: 1em;
+}
+#button:hover{
+    background-color: gainsboro;
+    color: rgb(37, 189, 173);
+}
+#messageArea{
+    padding-left:20px;
+}

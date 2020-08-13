@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <form id="form">
+            <div class="inputs">
+                <label for="name">Name:</label>
+                <br>
+                <input id = "name" class ="wholeLine" name = "name" type="text">           
+            </div>
+            <div class="inputs middleLine">
+                <label for="salary">Desired Salary:</label>
+                <br>
+                <input id = "salary" name = "Desired Salary" type="number">   
+            </div>
+            <div class="inputs middleLine">
+                <label for="birthday">Birthday:</label>
+                <br>
+                <input id = "birthday" name = "birthday" type="date" required>
+            </div>
+            <div class="inputs">
+                <label for="phone">Phone:</label>
+                <br>
+                <input id = "phone"  class ="wholeLine" name = "phone" type="number">
+            </div>
+            <div id="buttonWraper"class="inputs">
+                <input id ="button" type="button" value="Submit">
+            </div>
+            <br>
+            <br>
+            <div id="messageAreaContainer">
+                <ul id="messageArea"></ul>
+            </div>            
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
