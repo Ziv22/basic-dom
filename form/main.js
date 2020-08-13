@@ -8,14 +8,12 @@ const phone = document.getElementById("phone");
 const submit = document.getElementById("button");
 const messageArea = document.getElementById("messageArea");
 
-let good = true;
 let text = "";
-let messageCounter = 0;
 let welcomeMessage = "";
 
 const validate = function(){
     messageArea.innerHTML = "";
-    // clearMessageArea();
+
     if(!(name.value.length > 2)){
         good = false;
         text = "Name's length can't be 1 character"
@@ -45,26 +43,29 @@ const validate = function(){
         return
     } 
     console.log("success")
-    form.removeAttribute("display");
-    container.display = 'none';
+    container.classList.remove('visible-container');
+    container.classList.add('invisible-container');
     welcomeMessage = document.createElement("h1");
+    welcomeMessage.classList.add("welcome-message");
     welcomeMessage.innerHTML = `Welocme ${name.value}`;
     document.body.appendChild(welcomeMessage);
 }
 
 const displayError = function(text){
-    // if(messageCounter < 4){
         let errorMessage = document.createElement("li");
         errorMessage.innerHTML = text;
         errorMessage.classList.add("error-message");
         messageArea.appendChild(errorMessage);
-        // messageCounter++; 
-    // }
 }
+
 const clearMessageArea = function(){
     messageArea.innerHTML = "";
 }
 
 submit.onclick = function(){
     validate()
+}
+
+const inputDesign = function(element){
+    element.backgroundColor =  "rgb(251, 129, 159)";
 }

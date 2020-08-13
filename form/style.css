@@ -1,15 +1,18 @@
 body{
-    background-color: darkslategrey;
+    background-color: rgb(251, 129, 159);
     font-family: Arial, Helvetica, sans-serif;
 }
-#container{
-    position: absolute;
+.visible-container{
+    display: block;
+    width: 350px;
     margin-top: 50px;
     margin-left: 500px;
-    border: 5px solid rgb(37, 189, 173); 
     border-radius: 10px;
     padding:10px;
-    background-color: turquoise;
+    background-color: rgb(30, 47, 77);
+}
+.invisible-container{
+    display: none;
 }
 #buttonWraper{
     float: right;
@@ -32,16 +35,16 @@ body{
 }
 
 input{
+    background: transparent;
     border: none;
-    height:2em;
-    border-radius: 50px;
-    margin-top: 0.2em;
     outline: none;
-    padding-left:10px;
+    border-bottom: 1px solid lightgray;
+    color: lightgray;
 }
 
 label{
-    font-size: 1.4em;
+    font-size: 1.2em;
+    color:white;
 }
 
 .inputs{
@@ -52,11 +55,24 @@ label{
     height:2em;
     width: 10em;
     font-size: 1em;
+    background-color: rgb(251, 129, 159);
+    color: white
 }
 #button:hover{
-    background-color: gainsboro;
-    color: rgb(37, 189, 173);
+    background-color: white;
+    color: rgb(251, 129, 159);
 }
 #messageArea{
     padding-left:20px;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+.welcome-message{
+    color:rgb(30, 47, 77);
+    width: 800px;
+    line-height: 400px;
+    text-align: center;
+    position: absolute;
+    left: 350px;
 }
